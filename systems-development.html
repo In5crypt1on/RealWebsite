@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems & Game Development Languages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-hidden">
+    <!-- Settings Button -->
+    <a href="settings.html" id="settings-btn" title="Settings">⚙️</a>
+
+    <!-- Marker for JS to identify this as a category page -->
+    <div class="category-page-marker hidden"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-[var(--header-text)] mb-2 animate-on-load" style="transition-duration: 0.5s;">Systems & Game Development</h1>
+            <p class="text-xl text-gray-400 animate-on-load" style="transition-duration: 0.5s; transition-delay: 100ms;">High-performance languages for demanding applications.</p>
+            <a href="X-15-Website.html" class="text-[var(--accent-color)] hover:underline mt-4 inline-block animate-on-load" style="transition-duration: 0.5s; transition-delay: 200ms;">&larr; Back to Home</a>
+        </header>
+
+        <!-- Intro Paragraph -->
+        <div class="mb-12 text-lg text-center max-w-4xl mx-auto animate-on-load" style="transition-duration: 0.5s; transition-delay: 300ms;">
+            <p>This category covers languages built for raw power and performance. <strong class="text-[var(--accent-light)]">Systems programming</strong> involves writing low-level code for operating systems and hardware, while <strong class="text-[var(--accent-light)]">game development</strong> requires maximum efficiency to create immersive, real-time 3D worlds. These languages give developers fine-grained control over memory and processing.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-8 max-w-lg mx-auto flex items-center animate-on-load" style="transition-duration: 0.5s; transition-delay: 350ms;">
+            <input type="text" id="search-bar" placeholder="Search languages in this category..." class="w-full p-3 rounded-lg bg-[var(--card-bg)] border border-[var(--border-color)] text-[var(--text-color)] focus:ring-2 focus:ring-[var(--accent-color)] focus:outline-none">
+            <div id="active-filter-container" class="ml-4">
+                <!-- Active filter badge will be inserted here by JS -->
+            </div>
+        </div>
+
+        <!-- Other Major Languages Section -->
+        <section>
+            <div id="no-results" class="text-center text-gray-400 my-8 hidden">No languages found matching your search.</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+            <!-- C++ -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M10 12a2 2 0 11-4 0 2 2 0 014 0zM18 12a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <h3>C++</h3>
+                </div>
+                <p>A general-purpose language renowned for its high performance and control over system resources. It's a direct descendant of the C language.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Performance:</strong> Gives developers low-level memory management capabilities, making it ideal for applications where speed is critical.</li>
+                    <li><strong>Game Engines:</strong> The core language behind major game engines like Unreal Engine and CryEngine, as well as many AAA game titles.</li>
+                    <li><strong>High-Frequency Trading:</strong> Used in finance to build ultra-low-latency trading systems where microseconds matter.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>#include &lt;iostream&gt;
+
+int main() {
+  // Prints "Hello, World!" to the console
+  std::cout &lt;&lt; "Hello, World!";
+  return 0;
+}</code></pre>
+                </div>
+                <span class="tag">Game Development / Systems</span>
+            </div>
+            <!-- C# -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <h3>C#</h3>
+                </div>
+                <p>A modern, object-oriented language developed by Microsoft as part of its .NET framework. It's designed to be simple yet powerful.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Unity Engine:</strong> The primary scripting language for Unity, one of the world's most popular game engines, used for both 2D and 3D games.</li>
+                    <li><strong>Enterprise Software:</strong> Widely used in corporate environments to build internal tools and large-scale business applications on Windows.</li>
+                    <li><strong>Cross-Platform with .NET:</strong> Modern versions of .NET (formerly .NET Core) allow C# to build applications for Windows, macOS, and Linux.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>using System;
+
+class Program {
+  static void Main() {
+    // Prints "Hello, World!" to the console
+    Console.WriteLine("Hello, World!");
+  }
+}</code></pre>
+                </div>
+                <span class="tag">Game Development / Windows Apps</span>
+            </div>
+            <!-- Rust -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.608 3.292 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <h3>Rust</h3>
+                </div>
+                <p>A modern systems programming language that runs as fast as C++ but with guarantees against common memory-related bugs.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Memory Safety:</strong> Its unique "ownership" and "borrowing" system checks memory management at compile time, preventing crashes and security vulnerabilities.</li>
+                    <li><strong>Zero-Cost Abstractions:</strong> Allows developers to write high-level, expressive code that compiles down to highly efficient machine code with no runtime overhead.</li>
+                    <li><strong>Growing in Game Dev:</strong> Gaining traction for building custom game engines and performance-critical game components.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>fn main() {
+  // Prints "Hello, World!" to the console
+  println!("Hello, world!");
+}</code></pre>
+                </div>
+                <span class="tag">Systems Programming</span>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" title="Go to top">↑</button>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

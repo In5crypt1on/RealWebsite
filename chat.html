@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-hidden">
+    <!-- Marker for JS to identify this as the chat page -->
+    <div class="hidden" id="chat-page-marker"></div>
+
+    <div class="container flex flex-col h-screen py-4">
+        <header class="text-center mb-4">
+            <h1 class="text-4xl font-extrabold text-[var(--header-text)]">Global Chat</h1>
+            <p class="text-lg text-gray-400">Messages are shared with users on this computer.</p>
+            <a href="X-15-Website.html" class="text-[var(--accent-color)] hover:underline mt-2 inline-block">&larr; Back to Home</a>
+        </header>
+
+        <!-- Chat Messages Area -->
+        <div id="chat-messages" class="flex-grow bg-[var(--card-bg)] border border-[var(--border-color)] rounded-lg p-4 overflow-y-auto mb-4">
+            <!-- Messages will be injected here by JS -->
+        </div>
+
+        <!-- Message Input Form -->
+        <form id="chat-form" class="flex items-center">
+            <input 
+                type="text" 
+                id="chat-input" 
+                class="form-input flex-grow" 
+                placeholder="Type your message..." 
+                autocomplete="off"
+                required
+            >
+            <button type="submit" class="form-button ml-4 w-auto px-6">Send</button>
+        </form>
+    </div>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

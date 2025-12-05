@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud & DevOps Languages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-hidden">
+    <!-- Settings Button -->
+    <a href="settings.html" id="settings-btn" title="Settings">⚙️</a>
+
+    <!-- Marker for JS to identify this as a category page -->
+    <div class="category-page-marker hidden"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-[var(--header-text)] mb-2 animate-on-load" style="transition-duration: 0.5s;">Cloud & DevOps</h1>
+            <p class="text-xl text-gray-400 animate-on-load" style="transition-duration: 0.5s; transition-delay: 100ms;">Tools for automating and managing cloud infrastructure.</p>
+            <a href="X-15-Website.html" class="text-[var(--accent-color)] hover:underline mt-4 inline-block animate-on-load" style="transition-duration: 0.5s; transition-delay: 200ms;">&larr; Back to Home</a>
+        </header>
+
+        <!-- Intro Paragraph -->
+        <div class="mb-12 text-lg text-center max-w-4xl mx-auto animate-on-load" style="transition-duration: 0.5s; transition-delay: 300ms;">
+            <p>DevOps is a culture and set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the development life cycle and provide continuous delivery with high software quality. The languages and tools in this category are used to <strong class="text-[var(--accent-light)]">automate infrastructure</strong>, <strong class="text-[var(--accent-light)]">build deployment pipelines</strong>, and <strong class="text-[var(--accent-light)]">manage cloud services</strong>.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-8 max-w-lg mx-auto flex items-center animate-on-load" style="transition-duration: 0.5s; transition-delay: 350ms;">
+            <input type="text" id="search-bar" placeholder="Search languages in this category..." class="w-full p-3 rounded-lg bg-[var(--card-bg)] border border-[var(--border-color)] text-[var(--text-color)] focus:ring-2 focus:ring-[var(--accent-color)] focus:outline-none">
+            <div id="active-filter-container" class="ml-4">
+                <!-- Active filter badge will be inserted here by JS -->
+            </div>
+        </div>
+
+        <!-- Cloud & DevOps Section -->
+        <section>
+            <div id="no-results" class="text-center text-gray-400 my-8 hidden">No languages found matching your search.</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+            <!-- HCL (Terraform) -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    <h3>HCL (Terraform)</h3>
+                </div>
+                <p>HashiCorp Configuration Language (HCL) is a declarative language used by Terraform to define and provision cloud infrastructure as code.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Declarative:</strong> You describe the desired end state of your infrastructure, and Terraform figures out how to create, update, or destroy resources to reach that state.</li>
+                    <li><strong>Multi-Cloud:</strong> A single configuration can be used to manage infrastructure across multiple cloud providers like AWS, Azure, and Google Cloud.</li>
+                    <li><strong>State Management:</strong> Terraform keeps track of your managed infrastructure in a state file, which it uses to plan and apply changes.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code># Defines an AWS EC2 instance
+resource "aws_instance" "web" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+}</code></pre>
+                </div>
+                <span class="tag">Infrastructure as Code</span>
+            </div>
+            <!-- Go -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg>
+                    <h3>Go (Golang)</h3>
+                </div>
+                <p>A statically typed, compiled language designed at Google. Its simplicity, performance, and strong support for concurrency make it ideal for DevOps tooling.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Concurrency:</strong> "Goroutines" and "channels" make it easy to write programs that do many things at once, perfect for network services.</li>
+                    <li><strong>Fast Compilation:</strong> Compiles extremely quickly to a single static binary, making deployment simple and efficient.</li>
+                    <li><strong>DevOps Tooling:</strong> Many foundational DevOps tools, including Docker, Kubernetes, and Prometheus, are written in Go.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>package main
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, DevOps!")
+}</code></pre>
+                </div>
+                <span class="tag">Backend / Tooling</span>
+            </div>
+            <!-- Python (for DevOps) -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h3>Python</h3>
+                </div>
+                <p>While also a leader in data science, Python's simplicity and extensive libraries make it a go-to language for automating cloud tasks and writing operational scripts.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Scripting & Automation:</strong> Its easy-to-read syntax makes it perfect for writing scripts to automate repetitive tasks, manage deployments, or orchestrate services.</li>
+                    <li><strong>Cloud SDKs:</strong> Libraries like Boto3 (for AWS), Azure SDK for Python, and Google Cloud Client Libraries provide powerful, high-level access to cloud provider APIs.</li>
+                    <li><strong>Glue Language:</strong> Often used to connect different tools and services together in a DevOps pipeline.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>import boto3
+
+# Create an S3 client
+s3 = boto3.client('s3')
+
+# List all S3 buckets
+response = s3.list_buckets()
+for bucket in response['Buckets']:
+    print(f'  {bucket["Name"]}')</code></pre>
+                </div>
+                <span class="tag">Scripting / Automation</span>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" title="Go to top">↑</button>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

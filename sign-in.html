@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Settings Button -->
+    <a href="settings.html" id="settings-btn" title="Settings">⚙️</a>
+
+    <div class="container flex items-center justify-center min-h-screen">
+        <div class="sign-in-form w-full max-w-md animate-on-load">
+            <h2 class="text-3xl font-bold text-center text-[var(--accent-light)] mb-8">Sign In</h2>
+            <!-- Message for redirected users -->
+            <div id="redirect-message" class="hidden redirect-message p-3 rounded-md mb-6 text-center text-sm">
+                <!-- Content injected by JS -->
+            </div>
+            <form id="sign-in-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" required>
+                </div>
+
+                <!-- Custom "I'm not a robot" Checkbox -->
+                <div class="captcha-container">
+                    <div class="captcha-box">
+                        <div class="captcha-checkbox-wrapper">
+                            <input type="checkbox" id="robot-check" required>
+                            <div class="captcha-spinner"></div>
+                            <div class="captcha-checkmark">✓</div>
+                        </div>
+                        <label for="robot-check">I'm not a robot</label>
+                    </div>
+                    <div class="captcha-logo">
+                        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo" width="32" height="32">
+                        <p class="text-xs">reCAPTCHA</p>
+                    </div>
+                </div>
+
+                <!-- CAPTCHA Challenge Panel (hidden by default) -->
+                <div id="captcha-challenge" class="captcha-challenge hidden">
+                    <p class="text-sm text-center mb-2 text-gray-800">Please type the text below:</p>
+                    <div class="captcha-image">
+                        <!-- Simple SVG to simulate a CAPTCHA image -->
+                        <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg">
+                            <text id="captcha-svg-text" x="10" y="35" font-family="Arial, sans-serif" font-size="30" fill="#555" transform="rotate(-5, 20, 30) skewX(10)"></text>
+                            <line x1="0" y1="10" x2="150" y2="40" stroke="#aaa" stroke-width="1"/>
+                            <line x1="0" y1="30" x2="150" y2="15" stroke="#aaa" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="captcha-input" class="form-input mt-2" placeholder="Enter text...">
+                    <button type="button" id="verify-captcha-btn" class="form-button mt-2 text-sm py-2">Verify</button>
+                </div>
+
+                <button type="submit" id="sign-in-btn" class="form-button">Sign In</button>
+            </form>
+            <div class="text-center mt-6">
+                <a href="#" class="text-sm text-[var(--accent-light)] hover:underline">Forgot Password?</a>
+                <span class="mx-2 text-gray-500">|</span>
+                <a href="sign-up.html" class="text-sm text-[var(--accent-light)] hover:underline">Don't have an account? Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

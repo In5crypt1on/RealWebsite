@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-hidden">
+    <!-- Marker for JS to identify this as the profile page -->
+    <div class="hidden" id="profile-page-marker"></div>
+
+    <div class="container flex items-center justify-center min-h-screen">
+        <div class="sign-in-form w-full max-w-lg animate-on-load">
+            <!-- Profile Picture Display -->
+            <div class="flex justify-center mb-4">
+                <img id="pfp-preview" src="https://via.placeholder.com/128" alt="Profile Picture" class="w-32 h-32 rounded-full object-cover border-4 border-[var(--border-color)]">
+            </div>
+
+            <h2 class="text-3xl font-bold text-center text-[var(--accent-light)] mb-2">Edit Profile</h2>
+            <p class="text-center text-gray-400 mb-8">Your current username is <strong id="current-username" class="text-[var(--accent-light)]"></strong>.</p>
+            
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="new-username" class="form-label">New Username</label>
+                    <input type="text" id="new-username" class="form-input" placeholder="Leave blank to keep current username">
+                </div>
+                <div class="form-group">
+                    <label for="pfp-upload" class="form-label">Profile Picture</label>
+                    <input type="file" id="pfp-upload" class="form-input" accept="image/png, image/jpeg, image/gif">
+                </div>
+                <div class="form-group">
+                    <label for="user-description" class="form-label">Description</label>
+                    <textarea id="user-description" rows="4" class="form-input" placeholder="Tell us a little about yourself..."></textarea>
+                </div>
+                <button type="submit" class="form-button">Save Changes</button>
+            </form>
+            <div id="profile-status" class="text-center mt-4"></div>
+
+            <div class="text-center mt-6">
+                <a href="settings.html" class="text-sm text-[var(--accent-light)] hover:underline">&larr; Back to Settings</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

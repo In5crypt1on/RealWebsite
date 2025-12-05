@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Languages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Settings Button -->
+    <a href="settings.html" id="settings-btn" title="Settings">⚙️</a>
+
+    <!-- Marker for JS to identify this as a category page -->
+    <div class="category-page-marker hidden"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-[var(--header-text)] mb-2 animate-on-load" style="transition-duration: 0.5s;">Web Development</h1>
+            <p class="text-xl text-gray-400 animate-on-load" style="transition-duration: 0.5s; transition-delay: 100ms;">Languages for building websites and web applications.</p>
+            <a href="X-15-Website.html" class="text-[var(--accent-color)] hover:underline mt-4 inline-block animate-on-load" style="transition-duration: 0.5s; transition-delay: 200ms;">&larr; Back to Home</a>
+        </header>
+
+        <!-- Intro Paragraph -->
+        <div class="mb-12 text-lg text-center max-w-4xl mx-auto animate-on-load" style="transition-duration: 0.5s; transition-delay: 300ms;">
+            <p>Web development is the art of building and maintaining websites. It's split into two main areas: the <strong class="text-[var(--accent-light)]">frontend</strong> (the part you see and interact with in your browser, built with languages like HTML, CSS, and JavaScript) and the <strong class="text-[var(--accent-light)]">backend</strong> (the server-side logic that powers the site, using languages like Python, PHP, or Ruby). Below are some of the most essential languages in this field.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-8 max-w-lg mx-auto flex items-center animate-on-load" style="transition-duration: 0.5s; transition-delay: 350ms;">
+            <input type="text" id="search-bar" placeholder="Search languages in this category..." class="w-full p-3 rounded-lg bg-[var(--card-bg)] border border-[var(--border-color)] text-[var(--text-color)] focus:ring-2 focus:ring-[var(--accent-color)] focus:outline-none">
+            <div id="active-filter-container" class="ml-4">
+                <!-- Active filter badge will be inserted here by JS -->
+            </div>
+        </div>
+
+        <!-- Web Development Section -->
+        <section>
+            <div id="no-results" class="text-center text-gray-400 my-8 hidden">No languages found matching your search.</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+            <!-- HTML -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    <h3>HTML</h3>
+                </div>
+                <p>HyperText Markup Language is the skeleton of every web page. It uses "tags" to define content elements.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Structure:</strong> Defines headings (<code>&lt;h1&gt;</code>), paragraphs (<code>&lt;p&gt;</code>), links (<code>&lt;a&gt;</code>), images (<code>&lt;img&gt;</code>), and more.</li>
+                    <li><strong>Semantic HTML:</strong> Uses tags like <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> to describe the meaning of content, which improves accessibility and SEO.</li>
+                    <li><strong>The Foundation:</strong> It is the first and most essential layer of any website; no other web technology can work without it.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <span class="tag">Frontend</span>
+            </div>
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+                    <h3>CSS</h3>
+                </div>
+                <p>Cascading Style Sheets is the language used to style the visual presentation of a web page, from colors and fonts to layout and animations.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Presentation:</strong> Controls properties like <code>color</code>, <code>font-size</code>, <code>margin</code>, and <code>padding</code>.</li>
+                    <li><strong>Powerful Layouts:</strong> Modern CSS includes advanced systems like Flexbox and Grid to create complex and responsive page arrangements.</li>
+                    <li><strong>Frameworks:</strong> Often used with frameworks like Tailwind CSS (utility-first) or Bootstrap (component-based) to speed up development.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>/* Selects all paragraphs and makes them red */
+p {
+  color: red;
+  font-size: 16px;
+}</code></pre>
+                </div>
+                <span class="tag">Frontend</span>
+            </div>
+            <!-- JavaScript -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    <h3>JavaScript</h3>
+                </div>
+                <p>As the primary scripting language of the web, JavaScript brings interactivity to HTML pages. While HTML provides structure, JavaScript provides behavior. Here's what it typically does:</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>DOM Manipulation:</strong> Selects HTML elements (like <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, or <code>&lt;button&gt;</code>) and changes their style, content, or attributes dynamically.</li>
+                    <li><strong>Frontend Frameworks:</strong> Powers popular libraries and frameworks like React, Vue, and Angular to build complex single-page applications (SPAs).</li>
+                    <li><strong>Backend with Node.js:</strong> Allows JavaScript to be run on a server, enabling developers to build full-stack applications with a single language.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>// Prints "Hello, World!" to the browser console
+console.log("Hello, World!");</code></pre>
+                </div>
+                <span class="tag">Frontend / Backend</span>
+            </div>
+            <!-- PHP -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                    <h3>PHP</h3>
+                </div>
+                <p>A server-side scripting language specifically designed for web development. It's one of the most established technologies on the web.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>WordPress:</strong> Powers over 40% of the web, largely because it is the language behind the WordPress content management system (CMS).</li>
+                    <li><strong>Mature Frameworks:</strong> Home to robust frameworks like Laravel and Symfony, which provide structure for large, maintainable applications.</li>
+                    <li><strong>Easy to Deploy:</strong> Supported by virtually all web hosting providers, making it one of the easiest backend languages to get started with.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code>&lt;?php
+  // Prints "Hello, World!" to the page
+  echo "Hello, World!";
+?&gt;</code></pre>
+                </div>
+                <span class="tag">Backend</span>
+            </div>
+            <!-- Ruby -->
+            <div class="language-card animate-on-load">
+                <div class="flex items-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4 text-[var(--accent-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6V5m0 12v-1m0 1c-1.11 0-2.08-.402-2.599-1M12 18c-1.657 0-3-.895-3-2s1.343-2 3-2 3-.895 3-2 1.343-2 3-2m0 8c1.11 0 2.08.402 2.599 1M12 18v1m0-1v-.01m0-10v.01M12 6a2 2 0 110-4 2 2 0 010 4zm0 12a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                    <h3>Ruby</h3>
+                </div>
+                <p>A dynamic, open-source language with a focus on developer happiness, simplicity, and productivity.</p>
+                <ul class="detailed-list text-sm text-gray-400 mt-2">
+                    <li><strong>Ruby on Rails:</strong> A highly influential web framework that prioritizes "convention over configuration," making it fast to develop complex applications.</li>
+                    <li><strong>Developer Productivity:</strong> The language and its ecosystem are designed to make developers happy and efficient, with a focus on "don't repeat yourself" (DRY).</li>
+                    <li><strong>Scripting & Automation:</strong> Excellent for writing scripts for system administration, build tools, and other automation tasks.</li>
+                </ul>
+                <button class="example-toggle">Show Example</button>
+                <div class="code-example">
+<button class="copy-btn">Copy</button>
+<pre class="p-4 text-sm overflow-x-auto"><code># Prints "Hello, World!" to the console
+puts "Hello, World!"</code></pre>
+                </div>
+                <span class="tag">Backend</span>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" title="Go to top">↑</button>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>

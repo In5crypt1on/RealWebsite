@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- This marker helps main.js identify the settings page -->
+    <div class="hidden" id="settings-page-marker"></div>
+
+    <div class="container flex items-center justify-center min-h-screen">
+        <div class="sign-in-form w-full max-w-md animate-on-load">
+            <h2 class="text-3xl font-bold text-center text-[var(--accent-light)] mb-8">Settings</h2>
+            
+            <!-- Settings Panel Content -->
+            <div id="settings-panel-content">
+                <div class="setting-item">
+                    <label for="theme-toggle" class="mr-4 text-lg">Light Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div id="profile-link-container" class="hidden">
+                    <!-- Profile link will be injected here by JS if user is logged in -->
+                </div>
+                <div class="setting-item pt-4">
+                    <a href="X-15-Website.html" class="w-full text-center bg-[var(--tag-bg)] hover:bg-[var(--accent-color)] hover:text-[var(--header-text)] text-[var(--tag-text)] font-bold py-2 px-4 rounded transition-colors duration-200">
+                        Back to Home
+                    </a>
+                </div>
+                <div class="setting-item">
+                    <a href="contact.html" class="w-full text-center bg-[var(--tag-bg)] hover:bg-[var(--accent-color)] hover:text-[var(--header-text)] text-[var(--tag-text)] font-bold py-2 px-4 rounded transition-colors duration-200">
+                        Contact
+                    </a>
+                </div>
+                <div id="auth-button-container" class="setting-item">
+                     <a href="sign-in.html" class="w-full text-center bg-[var(--accent-color)] hover:bg-[var(--accent-light)] text-white font-bold py-2 px-4 rounded transition-colors duration-200">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+
+            <!-- Danger Zone for destructive actions -->
+            <div id="danger-zone-container" class="mt-8">
+                <!-- Delete button will be injected here by JS if user is logged in -->
+            </div>
+            <!-- End Settings Panel Content -->
+
+        </div>
+    </div>
+
+    <!-- Centralized JavaScript File -->
+    <script src="main.js" defer></script>
+</body>
+</html>
